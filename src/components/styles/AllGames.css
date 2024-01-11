@@ -1,0 +1,265 @@
+.allGames Header {
+  z-index: 1;
+}
+.allGames .games {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 380px;
+}
+.allGames .games h1 {
+  position: absolute;
+  top: 150px;
+  left: 75px;
+  color: white;
+  font-size: 53px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.allGames .games ul {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 230px;
+  left: 40px;
+  list-style: none;
+  font-size: 18px;
+  color: #fcb900;
+}
+.allGames .games ul li span .pages {
+  text-decoration: none;
+  color: white;
+}
+.allGames .games ul .home:after {
+  content: ">";
+  display: inline-block;
+  margin-left: 0.4615rem;
+  margin-right: 0.4615rem;
+  color: white;
+}
+.allGames .gameList {
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.allGames .gameList .gameGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.allGames .gameList .gameGroup .gameItem {
+  height: 350px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.allGames .gameList .gameGroup .gameItem:hover {
+  transform: scale(1.05);
+}
+.allGames .gameList .gameGroup .gameItem img {
+  height: 220px;
+  max-width: 300px;
+  padding: 2px;
+  background-color: rgb(234, 231, 231);
+}
+.allGames .gameList .gameGroup .gameItem .gameText {
+  background-color: rgb(234, 231, 231);
+  padding-left: 8px;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .details_favorites button {
+  border: none;
+  background: none;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .details_favorites .fas {
+  font-size: 20px;
+  color: black;
+  padding: 0 0 0 10px;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .nameText {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .releaseDate {
+  font-weight: bolder;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .btn {
+  color: #fcb900;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background-color: #fcb900;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .btn:hover {
+  color: black;
+  background-color: transparent;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .btn:hover:before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+.allGames .gameList .pagination {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.allGames .gameList .pagination button {
+  border: 3px solid #fcb900;
+  color: #fcb900;
+}
+.allGames .gameList .pagination button:hover {
+  background-color: #fcb900;
+  color: white;
+}
+.allGames Footer {
+  position: absolute;
+  top: 2800px;
+}
+
+@media (max-width: 1024px) {
+  .allGames .gameList .gameGroup {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .allGames .gameList .gameGroup .gameItem {
+    margin-bottom: 20px;
+  }
+  .allGames .gameList .pagination {
+    justify-content: space-around;
+  }
+  .allGames footer {
+    top: 3900px;
+    max-width: 100%;
+  }
+  .allGames footer .footer {
+    display: grid;
+    grid-template-columns: none;
+  }
+  .allGames footer .footer .clouxPages .links {
+    margin: 10px;
+  }
+  .allGames footer .footer .clouxPages .links .link {
+    margin: 20px;
+  }
+  .allGames footer .footer .clouxPages .links .link > * {
+    margin-right: 100px;
+  }
+  .allGames footer .footer .newGame .hogwarts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .allGames footer .footerTwo {
+    max-width: 100%;
+  }
+  .allGames footer .footerTwo p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .allGames .gameList .gameGroup {
+    gap: 2px;
+  }
+  .allGames .gameList .gameGroup .gameItem {
+    margin-bottom: 40px;
+  }
+  .allGames .gameList .pagination {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 642px) {
+  .allGames .gameList .gameGroup {
+    gap: 0;
+  }
+  .allGames .gameList .gameGroup .gameItem {
+    width: 270px;
+    margin-bottom: 40px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 270px;
+  }
+}
+@media (max-width: 580px) {
+  .allGames .gameList .gameGroup .gameItem {
+    width: 240px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 240px;
+  }
+  .allGames footer .footer {
+    display: inline;
+  }
+  .allGames footer .footer .newGame h1 {
+    width: 200px;
+  }
+  .allGames footer .footerTwo h1 {
+    font-size: 20px;
+  }
+  .allGames footer .footerTwo p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .allGames .gameList .gameGroup .gameItem {
+    margin: 5px;
+    width: 210px;
+    margin-bottom: 40px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 210px;
+  }
+}
+@media (max-width: 440px) {
+  .allGames .gameList .gameGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .allGames .gameList .gameGroup .gameItem {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 350px;
+  }
+  .allGames footer {
+    top: 6600px;
+  }
+}
+@media (max-width: 390px) {
+  .allGames .gameList .gameGroup .gameItem {
+    width: 310px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 310px;
+  }
+}
+@media (max-width: 350px) {
+  .allGames .games h1 {
+    font-size: 35px;
+  }
+  .allGames .gameList .gameGroup .gameItem {
+    width: 280px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 280px;
+  }
+}
+@media (max-width: 290px) {
+  .allGames .gameList .gameGroup .gameItem {
+    width: 240px;
+  }
+  .allGames .gameList .gameGroup .gameItem img {
+    max-width: 240px;
+  }
+}/*# sourceMappingURL=AllGames.css.map */

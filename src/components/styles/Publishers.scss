@@ -1,0 +1,214 @@
+.publishersPage {
+    Header {
+        z-index: 1;
+    }
+    .games {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 380px;
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 75px;
+            color: white;
+            font-size: 53px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 230px;
+            left: 40px;
+            list-style: none;
+            font-size: 18px;
+            color: #fcb900;
+            li {
+                span {
+                    .pages {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .home {
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 0.4615rem;
+                    margin-right: 0.4615rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    .publishers {
+        position: absolute;
+        top: 530px;
+        transform: translateX(10%);
+        .publishers_list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;      
+            .publisher {
+                max-width: 350px;
+                margin-bottom: 30px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                .text {
+                    color: white;
+                    text-align: center;
+                    padding: 30px 20px;
+                    font-weight: bold;
+                    span {
+                        font-weight: lighter;
+                    }
+                    h1 {
+                        color: #fcb900;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            button {
+                border: 3px solid #fcb900;
+                color: #fcb900;
+                &:hover {
+                    background-color: #fcb900;
+                    color: white;
+                }
+            }
+        }
+
+    }
+    Footer {
+        position: absolute;
+        top: 2200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .publishersPage {
+        .publishers {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            .publishers_list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 10px;
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 2300px;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .publishersPage {
+        Footer {
+            position: absolute;
+            top: 2350px;
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .publishersPage {
+        .publishers {
+            .publishers_list {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                margin: 10px;
+                .publisher {
+                    max-width: 100%;
+                }
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 3250px;
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .publishersPage {
+        Footer {
+            position: absolute;
+            top: 3350px;
+        }
+    }
+}
+
+@media (max-width: 382px) {
+    .publishersPage {
+        Footer {
+            position: absolute;
+            top: 3450px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .publishersPage {
+        .games {
+            h1 {
+                font-size: 35px;
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 3550px;
+        }
+
+    }
+}
+
+@media (max-width: 324px) {
+    .publishersPage {
+        Footer {
+            position: absolute;
+            top: 3650px;
+        }
+    }
+}
+
+@media (max-width: 310px) {
+    .publishersPage {
+        .games {
+            h1 {
+                font-size: 30px;
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 3750px;
+        }
+    }
+}
+
+@media (max-width: 290px) {
+    .publishersPage {
+        Footer {
+            position: absolute;
+            top: 3850px;
+        }
+    }
+}
+
+@media (max-width: 263px) {
+    .publishersPage {
+        Footer {
+            position: absolute;
+            top: 4000px;
+        }
+    }
+}

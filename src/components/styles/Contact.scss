@@ -1,0 +1,55 @@
+.contactPage {
+    Header {
+        z-index: 1;
+    }
+    .games {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 380px;
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 75px;
+            color: white;
+            font-size: 53px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+    }
+    .contact {
+        .information {
+            margin: 25px;
+            .info {
+                display: flex;
+                flex-direction: row;
+                .fas {
+                    padding: 6px;
+                    color: #fcb900;
+                }
+            }
+        }
+    }
+    Footer {
+        position: absolute;
+        top: 800px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contactPage {
+        .contact {
+            position: absolute;
+            top: 70px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 481px) {
+    .contactPage {
+        .contact {
+            position: absolute;
+            top: 57px;
+        }
+    }
+}

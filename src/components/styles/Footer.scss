@@ -1,0 +1,266 @@
+footer {
+    position: absolute;
+    top: 5580px;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 30px;
+
+        h1 {
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+            padding: 20px;
+            span {
+              color: #fcb900;
+            }
+        }
+        .clouxPages {
+            .links {
+                display: flex;
+                flex-direction: row;
+                margin-top: 40px;
+                .link {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    .pages {
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px;
+
+                        &:hover {
+                            color: #fcb900;
+                        }
+                    }
+                }
+            }
+        }
+        .newGame {
+            .hogwarts {
+                margin-top: 40px;
+                img {
+                    width: 150px;
+                    height: 90px;
+                    object-fit: cover;
+                    margin: 20px;
+                }
+                .page {
+                    color: white;
+                    margin: 20px;
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+            }
+        }
+        .socialNetworks {
+            .networks {
+                padding: 20px;
+                .network {
+                    display: flex;
+                    flex-direction: row;
+                    p {
+                        color: white;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .footerTwo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: black;
+        align-items: center;
+        height: 50px;
+        p {
+            color: white;
+        }
+        h1 {
+            font-size: 30px;
+            color: white;
+            span {
+              color: #fcb900;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    footer {
+        top: 9900px;
+        max-width: 100%;
+        .footer {
+            display: grid;
+            grid-template-columns: none;
+
+            .clouxPages {
+                .links {
+                    margin: 10px;
+                    .link {
+                        margin: 20px;
+                    }
+                    .link > * {
+                        margin-right: 100px;
+                    }
+                }
+            }
+            .newGame {
+                .hogwarts {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+        }
+        .footerTwo {
+            max-width: 100%;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 710px) {
+    footer {
+        top: 10100px;
+    }
+}
+
+@media (max-width: 655px) {
+    footer {
+        top: 10300px;
+    }
+}
+
+@media (max-width: 580px) {
+    footer {
+        top: 10900px;
+        .footer {
+            display: inline;
+            .newGame {
+                h1 {
+                    width: 200px;
+                }
+            }
+        }
+        .footerTwo {
+            h1 {
+                font-size: 20px;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    footer {
+        top: 12200px;
+        .footer {
+            .clouxPages {
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                    .link {
+                        margin: 0;
+                    }
+                }
+            }
+            .newGame {
+                .hogwarts {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 495px) {
+    footer {
+        top: 12300px;
+    }
+}
+
+@media (max-width: 435px) {
+    footer {
+        top: 12500px;
+        .footer {
+            .clouxPages {
+                .links {
+                    .link > * {
+                        margin-right: 10px;
+                    }
+                    .link {
+                        margin-left: 0;
+                    }
+                    .pages {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media (max-width: 400px) {
+    footer {
+        .footer {
+            h1 {
+                font-size: 25px;
+            }
+            .newGame {
+                .hogwarts {
+                    img {
+                        width: 120px;
+                    }
+                    .page {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}            
+
+@media (max-width: 370px) {
+    footer {
+        top: 12700px;   
+        .footerTwo {
+            h1 {
+                font-size: 18px;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    footer {
+        .footer {
+            h1 {
+                font-size: 25px;
+            }
+            .newGame {
+                .hogwarts {
+                    img {
+                        width: 110px;
+                        height: 70px;
+                    }
+                    .page {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

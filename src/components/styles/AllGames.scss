@@ -1,0 +1,359 @@
+.allGames {
+    Header {
+        z-index: 1;
+    }
+    .games {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 380px;
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 75px;
+            color: white;
+            font-size: 53px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 230px;
+            left: 40px;
+            list-style: none;
+            font-size: 18px;
+            color: #fcb900;
+            li {
+                span {
+                    .pages {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .home {
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 0.4615rem;
+                    margin-right: 0.4615rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    .gameList{
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+    .gameGroup {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        
+        .gameItem {
+            height: 350px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            img {
+                height: 220px;
+                max-width: 300px;
+                padding: 2px;
+                background-color: rgb(234, 231, 231);
+            }
+            .gameText {
+                background-color: rgb(234, 231, 231);
+                padding-left: 8px;
+
+                .details_favorites {
+                    button {
+                        border: none;
+                        background: none;
+                    }
+                    .fas {
+                      font-size: 20px;
+                      color: black;
+                      padding: 0 0 0 10px;
+                    }
+                }
+                
+            .nameText {
+                font-size: 18px;
+                font-weight: bolder;
+            }
+            .releaseDate {
+                font-weight: bolder;
+            }
+            .btn {
+                color: #fcb900;
+                font-weight: 600;
+                text-decoration: none;
+                position: relative; 
+                transition: color 0.5s;
+          
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 22px;
+                    background-color: #fcb900;
+                    transform: scaleY(0); 
+                    transform-origin: top; 
+                    transition: transform 0.5s ease-in-out;
+                    z-index: -1;
+                }
+          
+                &:hover {
+                    color: black;
+                    background-color: transparent;
+                  
+                    &:before {
+                        transform: scaleY(1);
+                        transform-origin: bottom; 
+                    }
+                }
+            }
+          }
+        }
+        
+    }
+    .pagination {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        button {
+            border: 3px solid #fcb900;
+            color: #fcb900;
+            &:hover {
+                background-color: #fcb900;
+                color: white;
+            }
+        }
+    }
+    }
+    Footer {
+        position: absolute;
+        top: 2800px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+                .gameItem {
+                    margin-bottom: 20px;
+                }
+    
+            }
+            .pagination {
+                justify-content: space-around;
+            }
+        }
+        footer {
+            top: 3900px;
+            max-width: 100%;
+            .footer {
+                display: grid;
+                grid-template-columns: none;
+    
+                .clouxPages {
+                    .links {
+                        margin: 10px;
+                        .link {
+                            margin: 20px;
+                        }
+                        .link > * {
+                            margin-right: 100px;
+                        }
+                    }
+                }
+                .newGame {
+                    .hogwarts {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                }
+            }
+            .footerTwo {
+                max-width: 100%;
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                gap: 2px;
+                .gameItem {
+                    margin-bottom: 40px;
+                }
+    
+            }
+            .pagination {
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+@media (max-width: 642px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                gap: 0;
+                .gameItem {
+                    width: 270px;
+                    margin-bottom: 40px;
+                    img {
+                        max-width: 270px;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                .gameItem {
+                    width: 240px;
+                    img {
+                        max-width: 240px;
+                    }
+                }
+    
+            }
+        }
+        footer {
+            .footer {
+                display: inline;
+                .newGame {
+                    h1 {
+                        width: 200px;
+                    }
+                }
+            }
+            .footerTwo {
+                h1 {
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                .gameItem {
+                    margin: 5px;
+                    width: 210px;
+                    margin-bottom: 40px;
+                    img {
+                        max-width: 210px;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                grid-template-columns: repeat(1, 1fr);
+                .gameItem {
+                    width: 350px;
+                    margin-bottom: 40px;
+                    img {
+                        max-width: 350px;
+                    }
+                }
+    
+            }
+        }
+        footer {
+            top: 6600px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                .gameItem {
+                    width: 310px;
+                    img {
+                        max-width: 310px;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .allGames {
+        .games {
+            h1 {
+                font-size: 35px;
+            }
+        }
+        .gameList {
+            .gameGroup {
+                .gameItem {
+                    width: 280px;
+                    img {
+                        max-width: 280px;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+@media (max-width: 290px) {
+    .allGames {
+        .gameList {
+            .gameGroup {
+                .gameItem {
+                    width: 240px;
+                    img {
+                        max-width: 240px;
+                    }
+                }
+    
+            }
+        }
+    }
+}

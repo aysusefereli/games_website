@@ -1,0 +1,211 @@
+footer {
+  position: absolute;
+  top: 5580px;
+  width: 100%;
+  background-color: rgb(21, 21, 21);
+}
+footer .footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 30px;
+}
+footer .footer h1 {
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  padding: 20px;
+}
+footer .footer h1 span {
+  color: #fcb900;
+}
+footer .footer .clouxPages .links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+footer .footer .clouxPages .links .link {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+footer .footer .clouxPages .links .link .pages {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+footer .footer .clouxPages .links .link .pages:hover {
+  color: #fcb900;
+}
+footer .footer .newGame .hogwarts {
+  margin-top: 40px;
+}
+footer .footer .newGame .hogwarts img {
+  width: 150px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 20px;
+}
+footer .footer .newGame .hogwarts .page {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+footer .footer .socialNetworks .networks {
+  padding: 20px;
+}
+footer .footer .socialNetworks .networks .network {
+  display: flex;
+  flex-direction: row;
+}
+footer .footer .socialNetworks .networks .network p {
+  color: white;
+  padding-left: 10px;
+}
+footer .footerTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  align-items: center;
+  height: 50px;
+}
+footer .footerTwo p {
+  color: white;
+}
+footer .footerTwo h1 {
+  font-size: 30px;
+  color: white;
+}
+footer .footerTwo h1 span {
+  color: #fcb900;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    top: 9900px;
+    max-width: 100%;
+  }
+  footer .footer {
+    display: grid;
+    grid-template-columns: none;
+  }
+  footer .footer .clouxPages .links {
+    margin: 10px;
+  }
+  footer .footer .clouxPages .links .link {
+    margin: 20px;
+  }
+  footer .footer .clouxPages .links .link > * {
+    margin-right: 100px;
+  }
+  footer .footer .newGame .hogwarts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer .footerTwo {
+    max-width: 100%;
+  }
+  footer .footerTwo p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 710px) {
+  footer {
+    top: 10100px;
+  }
+}
+@media (max-width: 655px) {
+  footer {
+    top: 10300px;
+  }
+}
+@media (max-width: 580px) {
+  footer {
+    top: 10900px;
+  }
+  footer .footer {
+    display: inline;
+  }
+  footer .footer .newGame h1 {
+    width: 200px;
+  }
+  footer .footerTwo h1 {
+    font-size: 20px;
+  }
+  footer .footerTwo p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  footer {
+    top: 12200px;
+  }
+  footer .footer .clouxPages .links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  footer .footer .clouxPages .links .link {
+    margin: 0;
+  }
+  footer .footer .newGame .hogwarts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 495px) {
+  footer {
+    top: 12300px;
+  }
+}
+@media (max-width: 435px) {
+  footer {
+    top: 12500px;
+  }
+  footer .footer .clouxPages .links .link > * {
+    margin-right: 10px;
+  }
+  footer .footer .clouxPages .links .link {
+    margin-left: 0;
+  }
+  footer .footer .clouxPages .links .pages {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  footer .footer h1 {
+    font-size: 25px;
+  }
+  footer .footer .newGame .hogwarts img {
+    width: 120px;
+  }
+  footer .footer .newGame .hogwarts .page {
+    font-size: 14px;
+  }
+}
+@media (max-width: 370px) {
+  footer {
+    top: 12700px;
+  }
+  footer .footerTwo h1 {
+    font-size: 18px;
+  }
+  footer .footerTwo p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 330px) {
+  footer .footer h1 {
+    font-size: 25px;
+  }
+  footer .footer .newGame .hogwarts img {
+    width: 110px;
+    height: 70px;
+  }
+  footer .footer .newGame .hogwarts .page {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

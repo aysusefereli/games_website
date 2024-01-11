@@ -1,0 +1,553 @@
+.detailsPage {
+    Header {
+        z-index: 1;
+    }
+    .games {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 380px;
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 75px;
+            color: white;
+            font-size: 53px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 230px;
+            left: 40px;
+            list-style: none;
+            font-size: 18px;
+            color: #fcb900;
+            li {
+                span {
+                    .pages {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .home {
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 0.4615rem;
+                    margin-right: 0.4615rem;
+                    color: white;
+                }
+            }
+            .all {
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 0.4615rem;
+                    margin-right: 0.4615rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    .gameDetails {
+        position: absolute;
+        top: 350px;
+        display: flex;
+        flex-direction: row;
+        margin: 130px;
+
+        .slider_about{
+            display: flex;
+            flex-direction: column;
+            .slider {
+                width: 700px;
+            }
+            .about {
+                margin-top: 15px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                padding: 20px;
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    span {
+                        color: #fcb900;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .slider_about > * {
+            margin-right: 100px;
+          }
+        .details_poster{
+            display: flex;
+            flex-direction: column;
+
+            .details {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                padding: 20px;
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    span {
+                        color: #fcb900;
+                    }
+                }
+                .detail {
+                    display: flex;
+                    flex-direction: row;
+                    .fas {
+                        color: #fcb900;
+                        padding: 6px;
+                    }
+                    .far {
+                        color: #fcb900;
+                        padding: 6px;
+                    }
+                    p {
+                        font-weight: bold;
+                        span {
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+
+            .poster {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                margin-top: 50px;
+                img {
+                    padding: 20px;
+                    width: 300px;
+                    height: 330px;
+                    object-fit: cover;
+                }
+                h1 {
+                    padding: 25px 20px 0 20px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    span {
+                        color: #fcb900;
+                    }
+                }
+            }
+        }
+           
+    }
+    Footer {
+        position: absolute;
+        top: 1600px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .detailsPage {
+        max-width: 100%;
+        .gameDetails {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 60px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            .slider_about {
+                .about {
+                    width: 100%;
+                }
+            }
+            .details_poster {
+                margin-right: 100px;
+                width: 100%;
+                .details {
+                    margin-top: 50px;
+                }
+                .poster {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        Footer {
+            top: 2500px;
+        }
+    }
+}
+
+@media (max-width: 805px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 40px;
+        }
+        Footer {
+            top: 2500px;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 90px;
+            .slider_about {
+                .slider {
+                    width: 600px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 735px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 55px;
+        }
+    }
+}
+
+@media (max-width: 678px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 90px;
+            .slider_about {
+                .slider {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 645px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 70px;
+            .slider_about {
+                .slider {
+                    width: 500px;
+                }
+            }
+        }
+        Footer {
+            top: 2600px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 50px;
+        }    
+    }
+}
+
+@media (max-width: 585px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 70px;
+            .slider_about {
+                .slider {
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 565px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 60px;
+            .slider_about {
+                .slider {
+                    width: 430px;
+                }
+            }
+        }
+        Footer {
+            top: 2700px;
+        }
+    }
+}
+
+@media (max-width: 525px) {
+    .detailsPage {
+        .games {
+            h1 {
+                font-size: 40px;
+            }
+        }
+        .gameDetails {
+            margin-left: 53px;
+            .slider_about {
+                .slider {
+                    width: 420px;
+                }
+                .about {
+                    h1 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .details_poster {
+                .details {
+                    h1 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+                .poster {
+                    h1 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        Footer {
+            top: 2600px;
+        }
+    }
+}
+
+@media (max-width: 505px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 50px;
+            .slider_about {
+                .slider {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 45px;
+            .slider_about {
+                .slider {
+                    width: 380px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .detailsPage {
+        .games {
+            h1 {
+                font-size: 30px;
+            }
+            ul {
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+        .gameDetails {
+            margin-left: 40px;
+            .slider_about {
+                .slider {
+                    width: 360px;
+                }
+                .about {
+                    h1 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .details_poster {
+                .details {
+                    h1 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .poster {
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        Footer {
+            top: 2400px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 40px;
+            .slider_about {
+                .slider {
+                    width: 340px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 40px;
+            .slider_about {
+                .slider {
+                    width: 320px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 391px) {
+    .detailsPage {
+        .games {
+            h1 {
+                font-size: 25px;
+            }
+            ul {
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+        .gameDetails {
+            margin-left: 35px;
+            .slider_about {
+                .slider {
+                    width: 310px;
+                }
+                .about {
+                    h1 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .details_poster {
+                .details {
+                    h1 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 10px;
+                    }
+                }
+                .poster {
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        Footer {
+            top: 2200px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 32px;
+            .slider_about {
+                .slider {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 27px;
+            .slider_about {
+                .slider {
+                    width: 280px;
+                }
+                .about {
+                    h1 {
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 8px;
+                    }
+                }
+            }
+            .details_poster {
+                .details {
+                    h1 {
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 8px;
+                    }
+                }
+                .poster {
+                    h1 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        Footer {
+            top: 2000px;
+        }
+    }
+} 
+
+@media (max-width: 320px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 20px;
+            .slider_about {
+                .slider {
+                    width: 280px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 315px) {
+    .detailsPage {
+        .gameDetails {
+            margin-left: 20px;
+            .slider_about {
+                .slider {
+                    width: 260px;
+                }
+            }
+        }
+        Footer {
+            top: 2100px;
+        }
+    }
+}

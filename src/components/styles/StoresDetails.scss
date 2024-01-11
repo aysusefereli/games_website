@@ -1,0 +1,150 @@
+.storesDetails {
+    Header {
+        z-index: 1;
+    }
+    .games {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 380px;
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 75px;
+            color: white;
+            font-size: 53px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 230px;
+            left: 40px;
+            list-style: none;
+            font-size: 18px;
+            color: #fcb900;
+            li {
+                span {
+                    .pages {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .home {
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 0.4615rem;
+                    margin-right: 0.4615rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    .stores {
+        position: absolute;
+        top: 480px;
+        display: flex;
+        flex-direction: row;
+        margin: 30px;
+        .store_img {
+            img {
+                max-width: 640px;
+                height: 470px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            }
+        }
+        .text {
+            h1 {
+                font-size: 50px;
+                color: #fcb900;
+                font-weight: bold;
+            }
+            h4 {
+                font-weight: bold;
+                span {
+                    font-weight: lighter;
+                }
+            }
+        }
+        .text > * {
+            margin-left: 25px;
+        }
+    }
+    Footer {
+        position: absolute;
+        top: 1150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .storesDetails {
+        .stores {
+            display: flex;
+            flex-direction: column;
+
+            .store_img {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 1500px;
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .storesDetails {
+        .stores {
+            .text {
+                h1 {
+                    font-size: 35px;
+                }
+                h3 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .storesDetails {
+        .games {
+            h1 {
+                font-size: 35px;
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 1600px;
+        }
+
+    }
+}
+
+@media (max-width: 305px) {
+    .storesDetails {
+        Footer {
+            position: absolute;
+            top: 1720px;
+        }
+
+    }
+}
+
+@media (max-width: 275px) {
+    .storesDetails {
+        Footer {
+            position: absolute;
+            top: 1800px;
+        }
+
+    }
+}

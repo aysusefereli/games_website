@@ -1,0 +1,93 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Navbar, Nav, Form } from 'react-bootstrap';
+import './styles/Header.css';
+import Heart from '../assets/Heart.png';
+import Search from '../assets/Search_button.png';
+
+export default function Header() {
+  const [expanded, setExpanded] = useState(false);
+  let { gameId } = useParams();
+  const [input, setInput] = useState("");
+  const [results, setResults] = useState([]);
+
+  const fetchData = async (value) => {
+    try {
+      const response = await fetch(`https://api.rawg.io/api/games?key=442dd6be349248468289ed3abce8fc03`);
+      const data = await response.json();
+
+      const filteredResults = data.results.filter((game) => {
+        return value && game && game.name && game.name.toLowerCase().includes(value.toLowerCase());
+      });
+      console.log(filteredResults)
+
+      setResults(filteredResults);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const handleToggle = () => {
+    setExpanded(!expanded);
+  };
+
+  const handleChange = (value) => {
+    setInput(value);
+    fetchData(value);
+  };
+
+  return (
+    <div className='headerPage'>
+    <header>
+      <div className='header'>
+        <Navbar className={`navbar ${expanded ? 'expanded' : ''}`} expand="lg" variant="light">
+          <Navbar.Brand href="#home"><h1>CLOU<span>XGAME</span></h1></Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarNav" onClick={handleToggle}>
+            {expanded ? (
+              <i id='close' className='fas fa-times'></i>
+            ) : (
+              <div className='hamburger'>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            )}
+          </Navbar.Toggle>
+          <Navbar.Collapse id="navbarNav" className={expanded ? 'show' : ''}>
+            <Nav className={`mx-auto ${expanded ? 'hidden' : ''}`}>
+              <Link className="pages" to="/">Home</Link>
+              <Link className="pages" to="/allgames">All Games</Link>
+              <Link className="pages" to="/creators">Creators</Link>
+              <Link className='pages' to='/contact'>Contact</Link>
+              <Form className={`${expanded ? 'expanded' : ''}`}>
+                <div className="search">
+                  <input placeholder="search" value={input} onChange={(e) => handleChange(e.target.value)}/>
+                  <button>
+                    <img src={Search} alt="Search" />
+                  </button>
+                </div>
+                <div className='search-list'>
+                    {results.map((game, index) => (
+                      <Link  className='search-list-item' key={index} to={`/games/${game.id}`}>
+                        <div className='search-item-img'>
+                          <img src={game.background_image} alt={game.name} />
+                        </div>
+                        <div>
+                          <h3>{game.name}</h3>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+              </Form>
+              <Link className='favorites' to={"/favorites"} title='Favorites'>
+                <img src={Heart} alt="Favorites" />
+                <p>Favorites</p>
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
+    </header>
+    </div>
+  );
+}

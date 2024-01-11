@@ -1,0 +1,169 @@
+.developersPage Header {
+  z-index: 1;
+}
+.developersPage .games {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 380px;
+}
+.developersPage .games h1 {
+  position: absolute;
+  top: 150px;
+  left: 75px;
+  color: white;
+  font-size: 53px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.developersPage .games ul {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 230px;
+  left: 40px;
+  list-style: none;
+  font-size: 18px;
+  color: #fcb900;
+}
+.developersPage .games ul li span .pages {
+  text-decoration: none;
+  color: white;
+}
+.developersPage .games ul .home:after {
+  content: ">";
+  display: inline-block;
+  margin-left: 0.4615rem;
+  margin-right: 0.4615rem;
+  color: white;
+}
+.developersPage .developers {
+  position: absolute;
+  top: 530px;
+  transform: translateX(10%);
+}
+.developersPage .developers .developers_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.developersPage .developers .developers_list .developer {
+  max-width: 350px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+.developersPage .developers .developers_list .developer .text {
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-weight: bold;
+}
+.developersPage .developers .developers_list .developer .text span {
+  font-weight: lighter;
+}
+.developersPage .developers .developers_list .developer .text h1 {
+  color: #fcb900;
+  font-weight: bolder;
+}
+.developersPage .developers .pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.developersPage .developers .pagination button {
+  border: 3px solid #fcb900;
+  color: #fcb900;
+}
+.developersPage .developers .pagination button:hover {
+  background-color: #fcb900;
+  color: white;
+}
+.developersPage Footer {
+  position: absolute;
+  top: 2200px;
+}
+
+@media (max-width: 1024px) {
+  .developersPage .developers {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .developersPage .developers .developers_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+  }
+  .developersPage Footer {
+    position: absolute;
+    top: 2300px;
+  }
+}
+@media (max-width: 590px) {
+  .developersPage Footer {
+    position: absolute;
+    top: 2350px;
+  }
+}
+@media (max-width: 555px) {
+  .developersPage .developers .developers_list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+  }
+  .developersPage .developers .developers_list .developer {
+    max-width: 100%;
+  }
+  .developersPage Footer {
+    position: absolute;
+    top: 3250px;
+  }
+}
+@media (max-width: 445px) {
+  .developersPage Footer {
+    position: absolute;
+    top: 3350px;
+  }
+}
+@media (max-width: 382px) {
+  .developersPage Footer {
+    position: absolute;
+    top: 3450px;
+  }
+}
+@media (max-width: 350px) {
+  .developersPage .games h1 {
+    font-size: 35px;
+  }
+  .developersPage Footer {
+    position: absolute;
+    top: 3550px;
+  }
+}
+@media (max-width: 324px) {
+  .developersPage Footer {
+    position: absolute;
+    top: 3650px;
+  }
+}
+@media (max-width: 310px) {
+  .developersPage .games h1 {
+    font-size: 30px;
+  }
+  .developersPage Footer {
+    position: absolute;
+    top: 3750px;
+  }
+}
+@media (max-width: 290px) {
+  .developersPage Footer {
+    position: absolute;
+    top: 3850px;
+  }
+}
+@media (max-width: 263px) {
+  .developersPage Footer {
+    position: absolute;
+    top: 4100px;
+  }
+}/*# sourceMappingURL=Developers.css.map */

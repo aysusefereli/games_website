@@ -1,0 +1,214 @@
+.creatorsPage {
+    Header {
+        z-index: 1;
+    }
+    .games {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 380px;
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 75px;
+            color: white;
+            font-size: 53px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 230px;
+            left: 40px;
+            list-style: none;
+            font-size: 18px;
+            color: #fcb900;
+            li {
+                span {
+                    .pages {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .home {
+                &:after {
+                    content: '>';
+                    display: inline-block;
+                    margin-left: 0.4615rem;
+                    margin-right: 0.4615rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    .creators {
+        position: absolute;
+        top: 530px;
+        transform: translateX(10%);
+        .creators_list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;      
+            .creator {
+                max-width: 350px;
+                margin-bottom: 60px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                .text {
+                    color: white;
+                    text-align: center;
+                    padding: 0 8px 0 8px;
+                    font-weight: bold;
+                    span {
+                        font-weight: lighter;
+                    }
+                    h1 {
+                        color: #fcb900;
+                        font-weight: bolder;
+                    }
+                }
+                .creator_image {
+                    height: 120px;
+                    width: 120px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    margin-left: 50%;
+                    transform: translate(-50%, -50%);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            button {
+                border: 3px solid #fcb900;
+                color: #fcb900;
+                &:hover {
+                    background-color: #fcb900;
+                    color: white;
+                }
+            }
+        }
+
+    }
+    Footer {
+        position: absolute;
+        top: 2500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .creatorsPage {
+        .creators {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            .creators_list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 10px;
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 2800px;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 2900px;
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .creatorsPage {
+        .creators {
+            .creators_list {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                margin: 10px;
+                .creator {
+                    max-width: 100%;
+                }
+            }
+        }
+        Footer {
+            position: absolute;
+            top: 4600px;
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 4700px;
+        }
+    }
+}
+
+@media (max-width: 382px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 4800px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .creatorsPage {
+        .games {
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 324px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 4900px;
+        }
+    }
+}
+
+@media (max-width: 310px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 5000px;
+        }
+    }
+}
+
+@media (max-width: 290px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 5100px;
+        }
+    }
+}
+
+@media (max-width: 263px) {
+    .creatorsPage {
+        Footer {
+            position: absolute;
+            top: 5200px;
+        }
+    }
+}

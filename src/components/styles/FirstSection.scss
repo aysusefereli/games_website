@@ -1,0 +1,165 @@
+.firstsection {
+    img {
+        filter: brightness(80%);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh; 
+        object-fit: cover; 
+    }
+
+    ul {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        list-style: none;
+        padding: 0;
+    
+        li {
+            margin: 0 5px;
+        }
+    
+        button {
+            background-color: transparent;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border:  2px solid white;
+    
+            &.active {
+                color: white;
+            }
+    
+            &:hover {
+                color: white;
+            }
+
+            &:hover,
+            &.active {
+                span {
+                    background-color: white;
+                }
+            }
+    
+            span {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .title {
+        position: absolute;
+        z-index: 1;
+        color: white;
+        top: 300px;
+        left: 600px;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        width: 80%; 
+        line-height: 2.8;
+
+        h1 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 85px;
+            span {
+                color: #fcb900;
+            }
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+        .pages {
+            color: #fcb900;
+            font-weight: 600;
+            font-size: 20px;
+            text-decoration: none;
+            position: relative; 
+            transition: color 0.5s;
+        
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 22px;
+                background-color: #fcb900;
+                transform: scaleY(0); 
+                transform-origin: top; 
+                transition: transform 0.5s ease-in-out;
+                z-index: -1;
+            }
+        
+            &:hover {
+                color: white;
+                background-color: transparent;
+                
+                &:before {
+                    transform: scaleY(1);
+                    transform-origin: bottom; 
+                }
+            }
+          }
+        hr {
+            border: none;
+            border-top: 1px solid #fcb900;
+            opacity: 1;
+            margin: 20px auto; 
+            width: 50%; 
+        }
+        .games_line {
+            width: 105px;
+        }
+        .details_line {
+            width: 130px;
+        }
+        .contact_line {
+            width: 85px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .title {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            text-align: center;
+            line-height: 1.8;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .title {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95%; 
+        }
+    }
+
+    @media screen and (max-width: 256px) {
+        .title {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            h1 {
+                font-size: 60px; 
+            }
+        }
+    }
+    
+}
