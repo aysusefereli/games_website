@@ -93,6 +93,42 @@ header .header .hamburger span {
   margin: 6px;
 }
 
+.modal {
+  max-height: 650px;
+  overflow-y: auto;
+}
+.modal .title {
+  color: #fcb900;
+}
+.modal .modalBody .favorite-items {
+  margin: 15px;
+}
+.modal .modalBody .favorite-items .modal-favorite-item {
+  display: flex;
+  flex-direction: row;
+}
+.modal .modalBody .favorite-items .modal-favorite-item .img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal .modalBody .favorite-items .modal-favorite-item .name {
+  margin-left: 20px;
+  flex-grow: 1;
+  color: black;
+  text-decoration: none;
+}
+.modal .modalBody .favorite-items .modal-favorite-item .removeBtn {
+  float: right;
+  border-radius: 8px;
+}
+.modal .modalBody .clear-all-button .clearBtn {
+  margin-top: 20px;
+  float: right;
+  border-radius: 5px;
+}
+
 @media (max-width: 1024px) {
   .headerPage {
     position: relative;

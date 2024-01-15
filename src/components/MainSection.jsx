@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './styles/MainSection.css';
 import { Link } from 'react-router-dom';
+import { addToFavorites } from '../store/slices/gameSlice.js'
+import { useDispatch } from 'react-redux';
 
 export default function MainSection() {
   const [games, setGames] = useState([]);
@@ -11,6 +13,7 @@ export default function MainSection() {
   const [nextPage, setNextPage] = useState('');
   const [stores, setStores] = useState([]);
   const [featured, setFeatured] = useState([]);
+  const dispatch = useDispatch();
 
   const fetchGames = async (url, page = 1) => {
     try {
@@ -181,7 +184,9 @@ export default function MainSection() {
                         <p className='releaseDate'>Release Date: {gameData?.released}</p>
                         <div className='details_favorites'>
                           <Link className="btn" to={`/games/${game.id}`}>See More</Link>
-                          <i className="fas fa-plus" id='plus' aria-hidden="true"></i>
+                          <button onClick={() => dispatch(addToFavorites(game))}>
+                            <i title='Add To Favorites' className="fas fa-plus" id='plus' aria-hidden="true"></i>
+                          </button>
                         </div>
                       </div>
                     </div>

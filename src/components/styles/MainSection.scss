@@ -577,6 +577,10 @@
               font-weight: bolder;
             }
             .details_favorites {
+              button {
+                border: none;
+                background: none;
+              }
               .fas {
                 font-size: 20px;
                 color: black;

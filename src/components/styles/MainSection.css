@@ -506,6 +506,10 @@
 .fifthsection .topGenres .sidebar .gameGroup .gameItem .gameText .releaseDate {
   font-weight: bolder;
 }
+.fifthsection .topGenres .sidebar .gameGroup .gameItem .gameText .details_favorites button {
+  border: none;
+  background: none;
+}
 .fifthsection .topGenres .sidebar .gameGroup .gameItem .gameText .details_favorites .fas {
   font-size: 20px;
   color: black;

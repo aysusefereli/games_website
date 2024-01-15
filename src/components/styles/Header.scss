@@ -104,6 +104,45 @@ header {
 
 }
 
+.modal {
+  max-height: 650px;
+  overflow-y: auto;
+  .title {
+    color: #fcb900;
+  }
+  .modalBody {
+    .favorite-items {
+      margin: 15px;
+      .modal-favorite-item {
+        display: flex;
+        flex-direction: row;
+        .img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+        }
+        .name {
+          margin-left: 20px;
+          flex-grow: 1;
+          color: black;
+          text-decoration: none;
+        }
+        .removeBtn {
+          float: right;
+          border-radius: 8px;
+        }
+      }
+    }
+    .clear-all-button {
+      .clearBtn {
+        margin-top: 20px;
+        float: right;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .headerPage {
     position: relative;
