@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './styles/MainSection.css';
 import { Link } from 'react-router-dom';
 import { addToFavorites } from '../store/slices/gameSlice.js'
-import { useDispatch } from 'react-redux';
+import { removeFromFavorites } from '../store/slices/gameSlice.js';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function MainSection() {
   const [games, setGames] = useState([]);
@@ -13,6 +14,7 @@ export default function MainSection() {
   const [nextPage, setNextPage] = useState('');
   const [stores, setStores] = useState([]);
   const [featured, setFeatured] = useState([]);
+  const favorites = useSelector((state) => state.games.favorites);
   const dispatch = useDispatch();
 
   const fetchGames = async (url, page = 1) => {
@@ -72,6 +74,18 @@ export default function MainSection() {
 
   const isActive = (id) => {
     return activeTab.id === id;
+  };
+
+  const isGameInFavorites = (gameId) => {
+    return favorites.some((game) => game.id === gameId);
+  };
+
+  const handleFavoriteClick = (game) => {
+    if (isGameInFavorites(game.id)) {
+      dispatch(removeFromFavorites(game));
+    } else {
+      dispatch(addToFavorites(game));
+    }
   };
 
   const renderStars = (rating) => {
@@ -184,8 +198,9 @@ export default function MainSection() {
                         <p className='releaseDate'>Release Date: {gameData?.released}</p>
                         <div className='details_favorites'>
                           <Link className="btn" to={`/games/${game.id}`}>See More</Link>
-                          <button onClick={() => dispatch(addToFavorites(game))}>
-                            <i title='Add To Favorites' className="fas fa-plus" id='plus' aria-hidden="true"></i>
+                          <button onClick={() => handleFavoriteClick(game)}>
+                            <i title={isGameInFavorites(game.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                              className={isGameInFavorites(game.id) ? 'fas fa-check' : 'fas fa-plus'} id='plus' aria-hidden="true"></i>
                           </button>
                         </div>
                       </div>
