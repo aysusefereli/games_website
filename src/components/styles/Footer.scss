@@ -91,7 +91,7 @@ footer {
 
 @media (max-width: 1024px) {
     footer {
-        top: 9900px;
+        top: 9100px;
         max-width: 100%;
         .footer {
             display: grid;
@@ -125,21 +125,28 @@ footer {
     }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 900px) {
     footer {
         top: 10100px;
+        max-width: 100%;
     }
-}
+}        
 
-@media (max-width: 655px) {
+@media (max-width: 710px) {
     footer {
         top: 10300px;
     }
 }
 
+@media (max-width: 655px) {
+    footer {
+        top: 10500px;
+    }
+}
+
 @media (max-width: 580px) {
     footer {
-        top: 10900px;
+        top: 11000px;
         .footer {
             display: inline;
             .newGame {
@@ -264,3 +271,10 @@ footer {
         }
     }
 }
+
+@media (max-width: 290px) {
+    footer {
+        top: 13000px;
+        max-width: 100%;
+    }
+}  

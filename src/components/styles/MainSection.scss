@@ -86,27 +86,85 @@
 }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .secondsection {
         .secondPage {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            .cloux_games,
-            .cloux_game_details,
-            .cloux_contact {
-                max-width: 100%;
-            }
+          position: absolute;
+          top: 770px;
+          display: flex;
+          flex-direction: column;
+          .cloux_games,
+          .cloux_game_details,
+          .cloux_contact {
+            max-width: 100%;
+          }
         }
     }
 }
 
-@media (max-width: 256px) {
+@media (max-width: 820px) and (height: 1180px) {
+  .secondsection {
     .secondPage {
-        position: absolute;
-        top: 850px;
+      position: absolute;
+      top: 1300px;
     }
+  }
 }
+
+@media (max-width: 770px) and (height: 1024px) {
+  .secondsection {
+    .secondPage {
+      position: absolute;
+      top: 1100px;
+    }
+  }
+}
+
+@media (max-width: 450px) and (height: 932px) {
+  .secondsection {
+    .secondPage {
+      position: absolute;
+      top: 1000px;
+    }
+  }
+}
+
+@media (max-width: 450px) and (height: 915px) {
+  .secondsection {
+    .secondPage {
+      position: absolute;
+      top: 1000px;
+    }
+  }
+}
+
+@media (max-width: 450px) and (height: 896px) {
+  .secondsection {
+    .secondPage {
+      position: absolute;
+      top: 1000px;
+    }
+  }
+}
+
+@media (max-width: 450px) and (height: 844px) {
+  .secondsection {
+    .secondPage {
+      position: absolute;
+      top: 1000px;
+    }
+  }
+}
+
+@media (max-width: 400px) and (height: 667px) {
+  .secondsection {
+    .secondPage {
+      position: absolute;
+      top: 900px;
+    }
+  }
+}
+
 
 .thirdsection {
   position: relative;
@@ -268,11 +326,11 @@
   .thirdsection {
     .ourGames {
       font-size: 34px;
-      top: 900px;
+      top: 1050px;
     }
 
     .page-content {
-      top: 1000px;
+      top: 1200px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 10px;
@@ -283,11 +341,11 @@
 @media screen and (max-width: 650px) {
   .thirdsection {
     .ourGames {
-      top: 1000px;
+      top: 1100px;
     }
 
     .page-content {
-      top: 1100px;
+      top: 1200px;
     }
   }
 }
@@ -296,7 +354,7 @@
   .thirdsection {
     max-width: 100%;
     position: relative;
-    top: 170px;
+    top: 260px;
     .ourGames {
       font-size: 30px;
       top: 800px;
@@ -313,7 +371,7 @@
   .thirdsection {
     max-width: 100%;
     position: relative;
-    top: 300px;
+    top: 320px;
 
     .page-content {
       top: 910px;
@@ -321,11 +379,19 @@
   }
 }
 
+@media screen and (max-width: 335px) {
+  .thirdsection {
+    max-width: 100%;
+    position: relative;
+    top: 350px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .thirdsection {
     max-width: 100%;
     position: relative;
-    top: 290px;
+    top: 370px;
     .ourGames {
       font-size: 30px;
       top: 800px;
@@ -340,13 +406,13 @@
 
 @media screen and (max-width: 285px) {
   .thirdsection {
-    top: 330px;
+    top: 390px;
   }
 }
 
 @media screen and (max-width: 280px) {
   .thirdsection {
-    top: 360px;
+    top: 440px;
     .ourGames {
       font-size: 30px;
       top: 800px;
@@ -428,7 +494,7 @@
 @media (max-width: 1024px) {
   .fourthsection {
     .newGame {
-      top: 2800px;
+      top: 3000px;
       display: flex;
       flex-direction: column;
 
@@ -446,7 +512,7 @@
 @media (max-width: 591px) {
   .fourthsection {
     .newGame {
-      top: 2900px;
+      top: 3000px;
     }
   }
 }
@@ -455,7 +521,7 @@
   .fourthsection {
   .newGame {
     padding: 50px;
-    top: 4090px;
+    top: 4200px;
 
     .newGameText {
       margin-right: 10px; 
@@ -484,7 +550,7 @@
 @media (max-width: 421px) {
   .fourthsection {
     .newGame {
-      top: 4250px;
+      top: 4300px;
     }
   }
 }
@@ -492,7 +558,7 @@
 @media (max-width: 285px) {
   .fourthsection {
     .newGame {
-      top: 4400px;
+      top: 4600px;
     }
   }
 }
@@ -630,12 +696,12 @@
     max-width: 100%;
 
     h1 {
-      top: 3800px;
+      top: 4000px;
     }
 
     .topGenres {
       max-width: 100%;
-      top: 3900px;
+      top: 4200px;
 
       .tabs-buttons {
         max-height: 300px; 
@@ -669,7 +735,7 @@
       max-width: 100%;
       width: 600px;
       max-width: 100%;
-      top: 3900px;
+      top: 4200px;
       position: relative;
       display: inline-block;
 
@@ -765,12 +831,8 @@
 
 @media (max-width: 600px) {
   .fifthsection {
-    h1 {
-      top: 3800px;
-    }
     .topGenres {
       max-width: 550px;
-      top: 4000px;
       .dropbtn {
         transform: translateX(50%);
       }
@@ -792,11 +854,11 @@
 @media (max-width: 576px) {
   .fifthsection {
     h1 {
-      top: 4700px;
+      top: 4800px;
     }
     .topGenres {
       max-width: 500px;
-      top: 4900px;
+      top: 5000px;
       .tabs-buttons {
         transform: translateX(-40%);
       }
@@ -937,12 +999,12 @@
 @media (max-width: 285px) {
   .fifthsection {
     h1 {
-      top: 4850px;
+      top: 5100px;
       font-size: 35px;
     }
     .topGenres {
       max-width: 240px;
-      top: 5000px;
+      top: 5200px;
       .sidebar {
         .gameGroup {
           margin-left: 20px;
@@ -1005,10 +1067,22 @@
 @media (max-width: 1024px) {
   .sixthsection {
     h1 {
-      top: 7050px;
+      top: 6000px;
     }
     .ourStores {
-      top: 7150px;
+      top: 6200px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .sixthsection {
+    h1 {
+      top: 7300px;
+    }
+    .ourStores {
+      top: 7400px;
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -1065,6 +1139,17 @@
           height: 250px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 290px) {
+  .sixthsection {
+    h1 {
+      top: 8300px;
+    }
+    .ourStores {
+      top: 8500px;
     }
   }
 }
