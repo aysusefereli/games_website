@@ -1113,11 +1113,11 @@
 @media (max-width: 576px) {
   .sixthsection {
     h1 {
-      top: 8000px;
+      top: 8100px;
       font-size: 50px;
     }
     .ourStores {
-      top: 8100px;
+      top: 8200px;
       .stores {
         .storesText {
           .storeDetails {
@@ -1157,7 +1157,7 @@
 @media (max-width: 400px) {
   .sixthsection {
     .ourStores {
-      top: 8200px;
+      top: 8300px;
     }
   }
 }
@@ -1221,6 +1221,17 @@
 }
 
 @media (max-width: 360px) and (height: 740px) {
+  .sixthsection {
+    h1 {
+      top: 8300px;
+    }
+    .ourStores {
+      top: 8500px;
+    }
+  }
+}
+
+@media (max-width: 375px) and (height: 812px) {
   .sixthsection {
     h1 {
       top: 8300px;

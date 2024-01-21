@@ -286,6 +286,13 @@ footer {
     }
 }  
 
+@media (max-width: 375px) and (height: 812px) {
+    footer {
+        top: 12800px;
+        max-width: 100%;
+    }
+} 
+
 @media (max-width: 370px) {
     footer {
         top: 12700px;   
