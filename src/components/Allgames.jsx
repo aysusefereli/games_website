@@ -4,6 +4,7 @@ import './styles/AllGames.css';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 import { addToFavorites } from '../store/slices/gameSlice.js'
+import { removeFromFavorites } from '../store/slices/gameSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function Allgames() {
@@ -84,6 +85,18 @@ export default function Allgames() {
     return stars;
   };
 
+  const isGameInFavorites = (gameId) => {
+    return favorites.some((game) => game.id === gameId);
+  };
+
+  const handleFavoriteClick = (game) => {
+    if (isGameInFavorites(game.id)) {
+      dispatch(removeFromFavorites(game));
+    } else {
+      dispatch(addToFavorites(game));
+    }
+  };
+
   return (
     <div className="allGames">
       <Header />
@@ -105,28 +118,29 @@ export default function Allgames() {
         </div>
       </div>
       <div className='gameList'>
-            <div className="gameGroup">
-                {currentGames.map((game) => (
-                    <div className="gameItem" key={game.id}>
-                        <img src={game.background_image} alt={game.name} />
-                        <div className="gameText">
-                            <p className="nameText">{game.name}</p>
-                            <p className="rating">{renderStars(game.rating)}</p>
-                            <p className="releaseDate">Release Date: {game.released}</p>
-                            <div className='details_favorites'>
-                                <Link className="btn" to={`/games/${game.id}`}>See More</Link>
-                                <button onClick={() => dispatch(addToFavorites(game))}>
-                                  <i title='Add To Favorites' className="fas fa-plus" id='plus' aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <div className="pagination">
-                <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
-                <button onClick={handleNextPage} disabled={!nextPage}>Next</button>
-            </div>
+        <div className="gameGroup">
+          {currentGames.map((game) => (
+            <div className="gameItem" key={game.id}>
+              <img src={game.background_image} alt={game.name} />
+                <div className="gameText">
+                  <p className="nameText">{game.name}</p>
+                  <p className="rating">{renderStars(game.rating)}</p>
+                  <p className="releaseDate">Release Date: {game.released}</p>
+                  <div className='details_favorites'>
+                    <Link className="btn" to={`/games/${game.id}`}>See More</Link>
+                    <button onClick={() => handleFavoriteClick(game)}>
+                      <i title={isGameInFavorites(game.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                        className={isGameInFavorites(game.id) ? 'fas fa-check' : 'fas fa-plus'} id='plus' aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="pagination">
+            <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
+            <button onClick={handleNextPage} disabled={!nextPage}>Next</button>
+          </div>
         </div>
       <Footer/>
     </div>
