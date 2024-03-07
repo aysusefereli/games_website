@@ -187,25 +187,26 @@ export default function MainSection() {
           </div>
           <div className='sidebar'>
             <div className='gameGroup'>
-              {activeTab?.games?.map((game, index) => {
-              const gameData = games.find(g => g.id === game.id);
-                  return (
-                    <div className='gameItem' key={index}>
-                      <img src={gameData?.background_image} alt={game.name} />
-                      <div className='gameText'>
-                        <p className='nameText'>{gameData?.name}</p>
-                        <p className="rating">{renderStars(gameData?.rating)}</p>
-                        <p className='releaseDate'>Release Date: {gameData?.released}</p>
-                        <div className='details_favorites'>
-                          <Link className="btn" to={`/games/${game.id}`}>See More</Link>
-                          <button onClick={() => handleFavoriteClick(game)}>
-                            <i title={isGameInFavorites(game.id) ? 'Remove from Favorites' : 'Add to Favorites'}
-                              className={isGameInFavorites(game.id) ? 'fas fa-check' : 'fas fa-plus'} id='plus' aria-hidden="true"></i>
-                          </button>
-                        </div>
+              {activeTab?.games?.map((gameData, index) => {
+                const game = games.find(g => g.id === gameData.id) || {} ;
+              
+                return (
+                  <div className='gameItem' key={index}>
+                    <img src={game.background_image || 'default_background_image_url'} alt={game?.name} />
+                    <div className='gameText'>
+                      <p className='nameText'>{game?.name}</p>
+                      <p className="rating">{renderStars(game?.rating)}</p>
+                      <p className='releaseDate'>Release Date: {game?.released}</p>
+                      <div className='details_favorites'>
+                        <Link className="btn" to={`/games/${game.id}`}>See More</Link>
+                        <button onClick={() => handleFavoriteClick(game)}>
+                          <i title={isGameInFavorites(game.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                           className={isGameInFavorites(game.id) ? 'fas fa-check' : 'fas fa-plus'} id='plus' aria-hidden="true"></i>
+                        </button>
                       </div>
                     </div>
-                  );
+                  </div>
+                );
               })}
             </div>
           </div>

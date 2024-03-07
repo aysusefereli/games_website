@@ -34,7 +34,7 @@ export default function DetailsPage() {
         setDetailsImages(data.results);
         console.log(data.results)
       }); 
-  }, []);
+  }, [gameId]);
 
   const renderStars = (rating) => {
     const stars = [];
