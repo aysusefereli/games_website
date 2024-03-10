@@ -15,6 +15,7 @@ export default function Header() {
   const [results, setResults] = useState([]);
   const favorites = useSelector((state) => state.games.favorites);
   const dispatch = useDispatch();
+  const favoritesCount = favorites.length;
 
   const fetchData = async (value) => {
     try {
@@ -95,6 +96,11 @@ export default function Header() {
                 <div className='favorites' title='Favorites' onClick={handleFavoritesClick}>
                   <img src={Heart} alt="Favorites" />
                   <p>Favorites</p>
+                  {favoritesCount > 0 && (
+                    <div className='favorites-count'>
+                      {favoritesCount}
+                    </div>
+                  )}
                 </div>
               </Nav>
             </Navbar.Collapse>

@@ -81,6 +81,17 @@ header .header .favorites {
 header .header .favorites p {
   display: none;
 }
+header .header .favorites .favorites-count {
+  background-color: #fcb900;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  padding: 0 3.5px;
+  position: absolute;
+  top: 40px;
+  right: 78px;
+  font-size: 12px;
+}
 header .header #close {
   color: #fcb900;
 }
