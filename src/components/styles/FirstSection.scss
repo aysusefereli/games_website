@@ -59,14 +59,16 @@
 
     .title {
         position: absolute;
+        position: relative;
         z-index: 1;
         color: white;
-        top: 300px;
+        top: 250px;
         left: 600px;
         transform: translate(-50%, -50%);
         text-align: start;
         width: 80%; 
         line-height: 2.8;
+        margin: auto;
 
         h1 {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -132,6 +134,7 @@
 
     @media (max-width: 1024px) {
         .title {
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);

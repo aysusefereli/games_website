@@ -2,11 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
+   
 
 .secondPage {
-    position: absolute;
-    top: 680px;
+    
+    position: relative; 
+    top: 280px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -172,7 +174,7 @@
       font-weight: 800;
       font-size: 60px;
       position: absolute;
-      top: 380px;
+      top: 200px;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -184,7 +186,7 @@
 
   .page-content {
       position: absolute;
-      top: 510px;
+      top: 350px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
@@ -424,7 +426,7 @@
   position: relative;
   .newGame {
     position: absolute;
-    top: 1600px;
+    top: 1450px;
     background-size: cover;
     width: 100%;
     display: flex;
@@ -567,7 +569,7 @@
   position: relative;
   h1 {
     position: absolute;
-    top: 2200px;
+    top: 2050px;
     font-size: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     left: 50%;
@@ -578,7 +580,7 @@
   }
   .topGenres {
     position: absolute;
-    top: 2320px;
+    top: 2200px;
     display: flex;
     justify-content: center;
     align-items: center;

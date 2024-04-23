@@ -36,6 +36,17 @@ export default function DetailsPage() {
       }); 
   }, [gameId]);
 
+  useEffect(() => {
+    scrollToTop();
+  }, []); 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const renderStars = (rating) => {
     const stars = [];
     const roundedRating = Math.round(rating);
@@ -54,6 +65,7 @@ export default function DetailsPage() {
     const percentage = (starIndex / 5) * 100;
     return rating >= percentage ? 'color5' : (rating >= percentage - 20 ? 'color4' : (rating >= percentage - 40 ? 'color3' : (rating >= percentage - 60 ? 'color2' : 'color1')));
   }
+
   
   return (
     <div className='detailsPage'>

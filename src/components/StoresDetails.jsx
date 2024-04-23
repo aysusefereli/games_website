@@ -17,6 +17,17 @@ export default function StoresDetails() {
       });  
   }, []);
 
+  useEffect(() => {
+    scrollToTop();
+  }, []); 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className='storesDetails'>
       <Header/>

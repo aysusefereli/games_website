@@ -64,6 +64,18 @@ export default function Developers() {
       console.error("Error fetching data:", error);
     }
   };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []); 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
   return (
     <div className='developersPage'>
       <Header />
