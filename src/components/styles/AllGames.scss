@@ -55,7 +55,6 @@
         
         .gameItem {
             height: 350px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             margin: 10px;
             transition: transform 0.3s ease-in-out;
             &:hover {
@@ -65,13 +64,9 @@
             img {
                 height: 220px;
                 max-width: 300px;
-                padding: 2px;
-                background-color: rgb(234, 231, 231);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             }
             .gameText {
-                background-color: rgb(234, 231, 231);
-                padding-left: 8px;
-
                 .details_favorites {
                     button {
                         border: none;
@@ -85,11 +80,18 @@
                 }
                 
             .nameText {
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: bolder;
+                margin: 0;
             }
             .releaseDate {
-                font-weight: bolder;
+                margin: 0;
+                span {
+                    font-weight: 700;
+                }
+            }
+            .rating {
+                margin: 0;
             }
             .btn {
                 color: #fcb900;
@@ -97,6 +99,7 @@
                 text-decoration: none;
                 position: relative; 
                 transition: color 0.5s;
+                padding: 0;
           
                 &:before {
                     content: '';

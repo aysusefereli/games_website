@@ -49,7 +49,6 @@
 }
 .allGames .gameList .gameGroup .gameItem {
   height: 350px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   margin: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -59,12 +58,7 @@
 .allGames .gameList .gameGroup .gameItem img {
   height: 220px;
   max-width: 300px;
-  padding: 2px;
-  background-color: rgb(234, 231, 231);
-}
-.allGames .gameList .gameGroup .gameItem .gameText {
-  background-color: rgb(234, 231, 231);
-  padding-left: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 .allGames .gameList .gameGroup .gameItem .gameText .details_favorites button {
   border: none;
@@ -76,11 +70,18 @@
   padding: 0 0 0 10px;
 }
 .allGames .gameList .gameGroup .gameItem .gameText .nameText {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
+  margin: 0;
 }
 .allGames .gameList .gameGroup .gameItem .gameText .releaseDate {
-  font-weight: bolder;
+  margin: 0;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .releaseDate span {
+  font-weight: 700;
+}
+.allGames .gameList .gameGroup .gameItem .gameText .rating {
+  margin: 0;
 }
 .allGames .gameList .gameGroup .gameItem .gameText .btn {
   color: #fcb900;
@@ -88,6 +89,7 @@
   text-decoration: none;
   position: relative;
   transition: color 0.5s;
+  padding: 0;
 }
 .allGames .gameList .gameGroup .gameItem .gameText .btn:before {
   content: "";

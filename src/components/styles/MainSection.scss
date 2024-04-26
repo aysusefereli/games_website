@@ -3,11 +3,11 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-   
+
 
 .secondPage {
-    
-    position: relative; 
+
+    position: relative;
     top: 280px;
     display: flex;
     justify-content: space-around;
@@ -43,9 +43,9 @@
         color: #fcb900;
         font-weight: 600;
         text-decoration: none;
-        position: relative; 
+        position: relative;
         transition: color 0.5s;
-    
+
         &:before {
             content: '';
             position: absolute;
@@ -54,19 +54,19 @@
             width: 100%;
             height: 22px;
             background-color: #fcb900;
-            transform: scaleY(0); 
-            transform-origin: top; 
+            transform: scaleY(0);
+            transform-origin: top;
             transition: transform 0.5s ease-in-out;
             z-index: -1;
         }
-    
+
         &:hover {
             color: white;
             background-color: transparent;
-            
+
             &:before {
               transform: scaleY(1);
-              transform-origin: bottom; 
+              transform-origin: bottom;
             }
         }
       }
@@ -203,7 +203,7 @@
         color: #fcb900;
         overflow: hidden;
         position: relative;
-      
+
         &:before {
           content: '';
           position: absolute;
@@ -215,13 +215,13 @@
           background-color: #fcb900;
           opacity: 0.5;
         }
-      
+
         &:hover {
           &:before {
             height: 100%;
             opacity: 0.5;
           }
-      
+
           .content:before {
             content: '';
             position: absolute;
@@ -231,20 +231,20 @@
             transition: transform 0.5s ease-in-out;
             z-index: -1;
           }
-      
+
           .content {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
           }
-      
+
           .content:hover {
             .content:before {
               transform: scaleY(0);
               transform-origin: top;
             }
           }
-      
+
           .btn {
             display: none;
             position: absolute;
@@ -253,18 +253,18 @@
             transition: opacity 0.8s ease-in-out;
             z-index: 2;
           }
-        
+
           &:hover {
             .btn {
               display: block;
               opacity: 1;
               transition: opacity 0.8s ease-in-out;
             }
-        
+
             .btn:before {
               transform-origin: left;
             }
-        
+
             .btn:hover {
               .btn:before {
                 transform: scaleX(1);
@@ -296,7 +296,7 @@
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
           font-size: 20px;
         }
-        #genreName { 
+        #genreName {
           border-radius: 12px;
           padding: 0 5px 0 0;
         }
@@ -454,10 +454,10 @@
         color: #fcb900;
         font-weight: bolder;
         text-decoration: none;
-        position: relative; 
+        position: relative;
         transition: color 0.5s;
         font-size: 25px;
-    
+
         &:before {
             content: '';
             position: absolute;
@@ -466,27 +466,27 @@
             width: 100%;
             height: 22px;
             background-color: #fcb900;
-            transform: scaleY(0); 
-            transform-origin: top; 
+            transform: scaleY(0);
+            transform-origin: top;
             transition: transform 0.5s ease-in-out;
             z-index: -1;
         }
-    
+
         &:hover {
             color: white;
             background-color: transparent;
-            
+
             &:before {
               transform: scaleY(1);
-              transform-origin: bottom; 
+              transform-origin: bottom;
             }
         }
       }
     }
 
     img {
-      width: 100%; 
-      max-width: 420px; 
+      width: 100%;
+      max-width: 420px;
       height: auto;
       box-shadow: 0 0 25px rgb(255, 255, 255);
     }
@@ -505,7 +505,7 @@
       }
 
       img {
-        max-width: 100%; 
+        max-width: 100%;
       }
     }
   }
@@ -526,11 +526,11 @@
     top: 4200px;
 
     .newGameText {
-      margin-right: 10px; 
+      margin-right: 10px;
       h1 {
-        font-size: 25px; 
+        font-size: 25px;
         span {
-          font-size: 25px; 
+          font-size: 25px;
         }
       }
       p {
@@ -538,12 +538,12 @@
       }
 
       .pages {
-        font-size: 14px; 
+        font-size: 14px;
       }
     }
 
     img {
-      max-width: 100%; 
+      max-width: 100%;
     }
   }
 }
@@ -567,6 +567,7 @@
 
 .fifthsection {
   position: relative;
+
   h1 {
     position: absolute;
     top: 2050px;
@@ -582,8 +583,8 @@
     position: absolute;
     top: 2200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
 
     .dropbtn {
       display: none;
@@ -593,17 +594,22 @@
         }
       }
     }
+    .tabs-buttons {
+      padding: 30px;
+      background-size: cover;
+      background-position: center;
+      background: linear-gradient(#f4b300, #fcb900);
+    }
 
     .tabs-button {
-      display: flex;
-      flex-direction: column;
-      width: 250px;
-      height: 40px;
-      padding: 6px 30px;
-      border: 1px solid #ddd;
+      width: 180px;
+      height: 33px;
+      border: none;
       background-color: transparent;
+      color: white;
+      font-weight: 500;
       &:hover {
-        background-color: #fcb900;
+        background-color: #ffd45e;
       }
     }
     .tabs-active {
@@ -611,38 +617,38 @@
     }
 
     .sidebar {
+      max-width: 100%;
       .gameGroup {
-        position: absolute;
-        top: 0;
+        position: relative;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
-        margin-left: 45px;
-        
-        .gameItem {
-          height: 350px;
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-          margin: 5px;
-          transition: transform 0.3s ease-in-out;
-          &:hover {
-            transform: scale(1.05);
-          }
+        grid-template-columns: repeat(3, 1Fr);
+        padding: 50px 90px;
 
+        .gameItem {
+          margin: 0 20px 20px 20px;
+          max-width: 320px;
           img {
             height: 220px;
-            max-width: 300px;
-            padding: 2px;
-            background-color: rgb(234, 231, 231);
+            max-width: 320px;
+            width: auto;
+            box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
           }
           .gameText {
-            background-color: rgb(234, 231, 231);
-            padding-left: 8px;
+            display: flex;
+            flex-direction: column;
             .nameText {
-              font-size: 18px;
+              margin: 0;
+              font-size: 20px;
               font-weight: bolder;
             }
             .releaseDate {
-              font-weight: bolder;
+              margin: 0;
+              span {
+                font-weight: bolder;
+              }
+            }
+            .rating {
+              margin: 0;
             }
             .details_favorites {
               button {
@@ -656,12 +662,13 @@
               }
             }
             .btn {
-              color: #fcb900;
               font-weight: 600;
               text-decoration: none;
-              position: relative; 
+              position: relative;
               transition: color 0.5s;
-          
+              padding: 0;
+              color: #fcb900;
+
               &:before {
                 content: '';
                 position: absolute;
@@ -670,19 +677,19 @@
                 width: 100%;
                 height: 22px;
                 background-color: #fcb900;
-                transform: scaleY(0); 
-                transform-origin: top; 
+                transform: scaleY(0);
+                transform-origin: top;
                 transition: transform 0.5s ease-in-out;
                 z-index: -1;
               }
-          
+
               &:hover {
                 color: black;
                 background-color: transparent;
-                  
+
                 &:before {
                   transform: scaleY(1);
-                  transform-origin: bottom; 
+                  transform-origin: bottom;
                 }
               }
             }
@@ -695,19 +702,16 @@
 
 @media (max-width: 1024px) {
   .fifthsection {
-    max-width: 100%;
-
     h1 {
       top: 4000px;
     }
 
     .topGenres {
-      max-width: 100%;
       top: 4200px;
 
       .tabs-buttons {
-        max-height: 300px; 
-        overflow-y: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1Fr);
       }
 
       .tabs-button {
@@ -729,57 +733,15 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 971px) {
   .fifthsection {
     max-width: 100%;
 
     .topGenres {
-      max-width: 100%;
-      width: 600px;
-      max-width: 100%;
-      top: 4200px;
-      position: relative;
-      display: inline-block;
-
-      &:hover {
-        .tabs-buttons {
-          display: block;
-        }
-      }
-
-      .dropbtn {
-        display: block;
-        background-color: #fcb900;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        width: 250px;
-        transform: translateX(100%);
-      }
-
-      .tabs-buttons {
-        left: 20%;
-        transform: translateX(-100%);
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        transform: translateX(85%);
-
-        .tabs-button {
-          color: black;
-          padding: 12px 16px;
-          display: block;
-        }
-      } 
       .sidebar {
         width: 100%;
         .gameGroup {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 10px;
+          gap: 15px;
           width: 100%;
           top: 80px;
 
@@ -797,56 +759,34 @@
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 746px) {
   .fifthsection {
     .topGenres {
       .sidebar {
+        width: 100%;
         .gameGroup {
-          margin-left: 80px;
+          gap: 35px;
         }
+      }
+      .tabs-buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1Fr);
       }
     }
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 578px) {
   .fifthsection {
     .topGenres {
-      max-width: 550px;
-      .dropbtn {
-        transform: translateX(60%);
-      }
       .tabs-buttons {
-        transform: translateX(40%);
+        display: inline;
+        overflow-y: scroll;
+        height: 300px;
       }
       .sidebar {
         .gameGroup {
-          margin-left: 40px;
-          img {
-            max-width: 550px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .fifthsection {
-    .topGenres {
-      max-width: 550px;
-      .dropbtn {
-        transform: translateX(50%);
-      }
-      .tabs-buttons {
-        transform: translateX(19%);
-      }
-      .sidebar {
-        .gameGroup {
-          margin-left: 10px;
-          img {
-            max-width: 550px;
-          }
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     }
@@ -859,72 +799,7 @@
       top: 4800px;
     }
     .topGenres {
-      max-width: 500px;
       top: 5000px;
-      .tabs-buttons {
-        transform: translateX(35%);
-      }
-      .sidebar {
-        .gameGroup {
-          margin-left: 20px;
-          img {
-            max-width: 500px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .fifthsection {
-    .topGenres {
-      max-width: 450px;
-      .sidebar {
-        .gameGroup {
-          margin-left: 25px;
-          img {
-            max-width: 450px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .fifthsection {
-    .topGenres {
-      max-width: 400px;
-      .sidebar {
-        .gameGroup {
-          img {
-            max-width: 400px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .fifthsection {
-    .topGenres {
-      max-width: 350px;
-      .dropbtn {
-        transform: translateX(45%);
-      }
-      .tabs-buttons {
-        transform: translateX(38%);
-      }
-      .sidebar {
-        .gameGroup {
-          margin-left: 30px;
-          img {
-            max-width: 350px;
-          }
-        }
-      }
     }
   }
 }
@@ -934,68 +809,7 @@
     h1 {
       font-size: 50px;
     }
-    .topGenres {
-      max-width: 300px;
-      .dropbtn {
-        transform: translateX(25%);
-      }
-      .tabs-buttons {
-        transform: translateX(20%);
-      }
-      .sidebar {
-        .gameGroup {
-          margin-left: 30px;
-          img {
-            max-width: 300px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 335px) {
-  .fifthsection {
-    .topGenres {
-      max-width: 280px;
-      .dropbtn {
-        transform: translateX(20%);
-      }
-      .tabs-buttons {
-        transform: translateX(18%);
-      }
-      .sidebar {
-        .gameGroup {
-          margin-left: 20px;
-          img {
-            max-width: 280px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 310px) {
-  .fifthsection {
-    .topGenres {
-      max-width: 240px;
-      .dropbtn {
-        transform: translateX(8%);
-      }
-      .tabs-buttons {
-        transform: translateX(3%);
-      }
-      .sidebar {
-        .gameGroup {
-          margin-left: 20px;
-          img {
-            max-width: 240px;
-          }
-        }
-      }
-    }
-  }
+  }  
 }
 
 @media (max-width: 285px) {
@@ -1005,24 +819,15 @@
       font-size: 35px;
     }
     .topGenres {
-      max-width: 240px;
       top: 5200px;
-      .sidebar {
-        .gameGroup {
-          margin-left: 20px;
-          img {
-            max-width: 240px;
-          }
-        }
-      }
     }
-  }
+  }    
 }
 
 .sixthsection {
   h1 {
     position: absolute;
-    top: 3950px;
+    top: 4080px;
     font-size: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     left: 50%;
@@ -1033,7 +838,7 @@
   }
   .ourStores {
     position: absolute;
-    top: 4050px;
+    top: 4160px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 50px;
@@ -1069,57 +874,56 @@
 @media (max-width: 1024px) {
   .sixthsection {
     h1 {
-      top: 6000px;
+      top: 6320px;
     }
     .ourStores {
-      top: 6200px;
+      top: 6400px;
       grid-template-columns: repeat(1, 1fr);
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .sixthsection {
     h1 {
-      top: 7300px;
+      top: 6400px;
     }
     .ourStores {
-      top: 7400px;
-      grid-template-columns: repeat(1, 1fr);
+      top: 6500px;
     }
   }
 }
 
-@media (max-width: 820px) and (max-height: 1024px) and (min-height: 660px) {
+@media (max-width: 750px) {
   .sixthsection {
     h1 {
-      top: 7900px;
+      top: 6550px;
     }
     .ourStores {
-      top: 8100px;
+      top: 6670px;
     }
   }
 }
 
-@media (max-width: 820px) and (height: 1180px) {
+@media (max-width: 595px) {
   .sixthsection {
     h1 {
-      top: 7900px;
+      top: 6650px;
     }
     .ourStores {
-      top: 8100px;
+      top: 6770px;
     }
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 578px) {
   .sixthsection {
     h1 {
-      top: 8100px;
+      top: 7800px;
       font-size: 50px;
     }
     .ourStores {
-      top: 8200px;
+      top: 7950px;
       .stores {
         .storesText {
           .storeDetails {
@@ -1130,6 +934,17 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .sixthsection {
+    h1 {
+      top: 8530px;
+    }
+    .ourStores {
+      top: 8630px;
     }
   }
 }
@@ -1147,16 +962,22 @@
 
 @media (max-width: 400px) {
   .sixthsection {
+    h1 {
+      top: 8600px;
+    }
     .ourStores {
-      top: 8300px;
+      top: 8750px;
     }
   }
 }
 
 @media (max-width: 370px) {
   .sixthsection {
+    h1 {
+      top: 8700px;
+    }
     .ourStores {
-      margin-left: 8px;
+      top: 8850px;
       .stores {
         img {
           width: 250px;
@@ -1167,35 +988,24 @@
   }
 }
 
-@media (max-width: 430px) and (max-height: 940px) and (min-height: 660px) {
+@media (max-width: 355px) {
   .sixthsection {
     h1 {
-      top: 8450px;
+      top: 8800px;
     }
     .ourStores {
-      top: 8600px;
+      top: 8950px;
     }
   }
 }
 
-@media (max-width: 375px) and (max-height: 940px) and (min-height: 660px) {
+@media (max-width: 295px) {
   .sixthsection {
     h1 {
-      top: 8270px;
+      top: 8900px;
     }
     .ourStores {
-      top: 8500px;
-    }
-  }
-}
-
-@media (max-width: 290px) {
-  .sixthsection {
-    h1 {
-      top: 8300px;
-    }
-    .ourStores {
-      top: 8500px;
+      top: 9050px;
     }
   }
 }

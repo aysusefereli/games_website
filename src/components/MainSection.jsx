@@ -179,7 +179,7 @@ export default function MainSection() {
         </div>
         <div className='topGenres'>
           <button className="dropbtn">Genres</button>
-          <div className={`tabs-buttons ${tabButtonStatus ? "show" : ""}`}>
+          <div className={`tabs-buttons ${tabButtonStatus ? "show" : ""}`} style={{background: `linear-gradient(#ffc10787, #ffc107b0), url(https://media.rawg.io/media/screenshots/723/7230cc1be966c19d2470a19d277b31e9.jpg)`}}>
             {genres.map((genre, index) => (
               <button onClick={() => { tabClickHandler(genre.id); tabButtonsHandler(); }} key={index}
               className={`tabs-button ${isActive(genre.id) ? 'tabs-active' : ''}`}>{genre?.name}</button>
@@ -196,7 +196,7 @@ export default function MainSection() {
                     <div className='gameText'>
                       <p className='nameText'>{game?.name}</p>
                       <p className="rating">{renderStars(game?.rating)}</p>
-                      <p className='releaseDate'>Release Date: {game?.released}</p>
+                      <p className='releaseDate'><span>Release Date:</span> {game?.released}</p>
                       <div className='details_favorites'>
                         <Link className="btn" to={`/games/${game.id}`}>See More</Link>
                         <button onClick={() => handleFavoriteClick(game)}>

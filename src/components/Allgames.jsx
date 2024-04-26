@@ -125,7 +125,7 @@ export default function Allgames() {
                 <div className="gameText">
                   <p className="nameText">{game.name}</p>
                   <p className="rating">{renderStars(game.rating)}</p>
-                  <p className="releaseDate">Release Date: {game.released}</p>
+                  <p className="releaseDate"><span>Release Date:</span> {game.released}</p>
                   <div className='details_favorites'>
                     <Link className="btn" to={`/games/${game.id}`}>See More</Link>
                     <button onClick={() => handleFavoriteClick(game)}>

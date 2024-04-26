@@ -1,6 +1,6 @@
 footer {
     position: absolute;
-    top: 5580px;
+    top: 5630px;
     width: 100%;
     background-color: rgb(21, 21, 21);
     .footer {
@@ -91,7 +91,7 @@ footer {
 
 @media (max-width: 1024px) {
     footer {
-        top: 9100px;
+        top: 9300px;
         max-width: 100%;
         .footer {
             display: grid;
@@ -127,40 +127,34 @@ footer {
 
 @media (max-width: 900px) {
     footer {
-        top: 10100px;
+        top: 9300px;
         max-width: 100%;
     }
 } 
 
-@media (max-width: 820px) and (max-height: 1024px) and (min-height: 660px) {
+@media (max-width: 750px) {
     footer {
-        top: 11000px;
+        top: 9500px;
         max-width: 100%;
     }
-}
+} 
 
-@media (max-width: 820px) and (height: 1180px) {
+@media (max-width: 690px) {
     footer {
-        top: 11000px;
+        top: 9700px;
         max-width: 100%;
     }
-}
-
-@media (max-width: 710px) {
-    footer {
-        top: 10300px;
-    }
-}
+} 
 
 @media (max-width: 655px) {
     footer {
-        top: 10500px;
+        top: 9800px;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
     footer {
-        top: 11000px;
+        top: 10000px;
         .footer {
             display: inline;
             .newGame {
@@ -180,9 +174,23 @@ footer {
     }
 }
 
+@media (max-width: 578px) {
+    footer {
+        top: 10800px;
+        max-width: 100%;
+    }
+} 
+
+@media (max-width: 574px) {
+    footer {
+        top: 11500px;
+        max-width: 100%;
+    }
+} 
+
 @media (max-width: 520px) {
     footer {
-        top: 12300px;
+        top: 12800px;
         .footer {
             .clouxPages {
                 .links {
@@ -206,13 +214,13 @@ footer {
 
 @media (max-width: 495px) {
     footer {
-        top: 12400px;
+        top: 12900px;
     }
 }
 
 @media (max-width: 435px) {
     footer {
-        top: 12500px;
+        top: 13000px;
         .footer {
             .clouxPages {
                 .links {
@@ -231,9 +239,9 @@ footer {
     }
 }    
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
     footer {
-        top: 12580px;
+        top: 13100px;
         .footer {
             h1 {
                 font-size: 25px;
@@ -254,7 +262,7 @@ footer {
 
 @media (max-width: 370px) {
     footer {
-        top: 12800px;   
+        top: 13500px;   
         .footerTwo {
             h1 {
                 font-size: 18px;
@@ -263,13 +271,6 @@ footer {
                 font-size: 10px;
             }
         }
-    }
-}
-
-@media (max-width: 430px) and (max-height: 940px) and (min-height: 660px) {
-    footer {
-        top: 13000px;
-        max-width: 100%;
     }
 }
 
@@ -296,7 +297,7 @@ footer {
 
 @media (max-width: 290px) {
     footer {
-        top: 13000px;
+        top: 13700px;
         max-width: 100%;
     }
 }  
