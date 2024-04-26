@@ -13,7 +13,8 @@ export default function Allgames() {
   const [nextPage, setNextPage] = useState('');
   const favorites = useSelector((state) => state.games.favorites);
   const dispatch = useDispatch();
-  console.log(favorites);
+  const [showMessageAdd, setShowMessageAdd] = useState(false); 
+  const [showMessageRemove, setShowMessageRemove] = useState(false); 
 
   const [currentPage, setCurrentPage] = useState(1);
   const [gamesPerPage, setGamesPerPage] = useState(15);
@@ -92,10 +93,21 @@ export default function Allgames() {
   const handleFavoriteClick = (game) => {
     if (isGameInFavorites(game.id)) {
       dispatch(removeFromFavorites(game));
+      setShowMessageRemove(true); 
     } else {
       dispatch(addToFavorites(game));
+      setShowMessageAdd(true); 
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMessageAdd(false);
+      setShowMessageRemove(false)
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, [showMessageAdd, showMessageRemove]);
 
   return (
     <div className="allGames">
@@ -117,6 +129,8 @@ export default function Allgames() {
           </ul>
         </div>
       </div>
+      {showMessageAdd && <div id="message">Game added to Favorites!</div>} 
+      {showMessageRemove && <div id="message">Game removed from Favorites!</div>} 
       <div className='gameList'>
         <div className="gameGroup">
           {currentGames.map((game) => (

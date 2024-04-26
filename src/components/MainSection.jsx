@@ -16,6 +16,8 @@ export default function MainSection() {
   const [featured, setFeatured] = useState([]);
   const favorites = useSelector((state) => state.games.favorites);
   const dispatch = useDispatch();
+  const [showMessageAdd, setShowMessageAdd] = useState(false); 
+  const [showMessageRemove, setShowMessageRemove] = useState(false); 
 
   const fetchGames = async (url, page = 1) => {
     try {
@@ -83,10 +85,21 @@ export default function MainSection() {
   const handleFavoriteClick = (game) => {
     if (isGameInFavorites(game.id)) {
       dispatch(removeFromFavorites(game));
+      setShowMessageRemove(true); 
     } else {
       dispatch(addToFavorites(game));
+      setShowMessageAdd(true); 
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMessageAdd(false);
+      setShowMessageRemove(false)
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, [showMessageAdd, showMessageRemove]);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -174,6 +187,8 @@ export default function MainSection() {
       </section>
 
       <section className='fifthsection'>
+      {showMessageAdd && <div id="message">Game added to Favorites!</div>} 
+      {showMessageRemove && <div id="message">Game removed from Favorites!</div>}
         <div>
           <h1>TOP <span>GENRES</span></h1>
         </div>

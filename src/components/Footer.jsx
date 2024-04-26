@@ -37,7 +37,7 @@ export default function Footer() {
                     <div className='hogwarts'> 
                         <img src={game.background_image}/>
                         <div>
-                            <Link className="page" to="/details">Hogwarts Legacy</Link>
+                            <Link className="page" to={`/games/${game.id}`}>Hogwarts Legacy</Link>
                         </div>
                     </div>
                 </div>

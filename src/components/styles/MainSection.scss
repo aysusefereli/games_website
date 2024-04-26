@@ -4,9 +4,7 @@
   align-items: center;
   min-height: 100vh;
 
-
 .secondPage {
-
     position: relative;
     top: 280px;
     display: flex;
@@ -566,7 +564,20 @@
 }
 
 .fifthsection {
-  position: relative;
+  position: relative; 
+
+  #message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(215, 215, 215);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }    
 
   h1 {
     position: absolute;
