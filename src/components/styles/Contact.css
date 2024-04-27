@@ -5,7 +5,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 380px;
+  height: 80px;
 }
 .contactPage .games h1 {
   position: absolute;
@@ -26,9 +26,27 @@
   padding: 6px;
   color: #fcb900;
 }
+.contactPage .contact .form {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 30px;
+}
+.contactPage .contact .form .email .form-group {
+  border: 1px solid gainsboro;
+  margin: 10px;
+}
+.contactPage .contact .form .email .nameAndEmail {
+  display: flex;
+  flex-direction: row;
+}
+.contactPage .contact .form .btn {
+  background-color: #fcb900;
+  border: 1px solid #fcb900;
+  margin-left: 10px;
+}
 .contactPage Footer {
   position: absolute;
-  top: 800px;
+  top: 900px;
 }
 
 @media (max-width: 1024px) {
@@ -38,9 +56,25 @@
     width: 100%;
   }
 }
+@media (max-width: 720px) {
+  .contactPage .contact .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactPage Footer {
+    top: 970px;
+  }
+}
 @media (max-width: 481px) {
   .contactPage .contact {
     position: absolute;
     top: 57px;
+  }
+  .contactPage .contact .form .email .nameAndEmail {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactPage Footer {
+    top: 1100px;
   }
 }/*# sourceMappingURL=Contact.css.map */
