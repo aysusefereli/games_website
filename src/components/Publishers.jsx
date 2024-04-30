@@ -3,6 +3,8 @@ import './styles/Publishers.css';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 export default function Publishers() {
   const [game, setGame] = useState([]);
@@ -109,9 +111,10 @@ export default function Publishers() {
           ))}
         </div>
         <div className="pagination">
-          <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
-          <button onClick={handleNextPage} disabled={!nextPage}>Next</button>
-        </div>
+            <Stack spacing={2}>
+              <Pagination count={10} variant="outlined" onChange={(event, page) => {handlePageClick(page); scrollToTop();}}/>
+            </Stack>
+          </div>
       </div>
       <Footer/>
     </div>

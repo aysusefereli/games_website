@@ -114,7 +114,7 @@ export default function Creators() {
             </div>
           ))}
         </div>
-        <div className="pagination">
+          <div className="pagination">
             <Stack spacing={2}>
               <Pagination count={10} variant="outlined" onChange={(event, page) => {handlePageClick(page); scrollToTop();}}/>
             </Stack>
