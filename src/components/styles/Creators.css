@@ -38,7 +38,7 @@
 }
 .creatorsPage .creators {
   position: absolute;
-  top: 530px;
+  top: 500px;
   transform: translateX(10%);
 }
 .creatorsPage .creators .creators_list {

@@ -8,6 +8,8 @@ import { removeFromFavorites } from '../store/slices/gameSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Allgames() {
   const [game, setGame] = useState([]);
@@ -122,6 +124,10 @@ export default function Allgames() {
     });
   };
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <div className="allGames">
       <Header />
@@ -145,7 +151,7 @@ export default function Allgames() {
       {showMessageAdd && <div id="message">Game added to Favorites!</div>} 
       {showMessageRemove && <div id="message">Game removed from Favorites!</div>} 
       <div className='gameList'>
-        <div className="gameGroup">
+        <div className="gameGroup" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           {currentGames.map((game) => (
             <div className="gameItem" key={game.id}>
               <img src={game.background_image} alt={game.name} />

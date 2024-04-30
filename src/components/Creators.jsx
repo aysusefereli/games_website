@@ -5,6 +5,8 @@ import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Creators() {
   const [game, setGame] = useState([]);
@@ -77,6 +79,10 @@ export default function Creators() {
       behavior: 'smooth'
     });
   };
+
+  useEffect(() => {
+    AOS.init({});
+  }, []);
   
   return (
     <div className='creatorsPage'>
