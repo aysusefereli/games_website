@@ -80,18 +80,18 @@
             }
         }
         .pagination {
+            margin-top: 30px;
             display: flex;
-            justify-content: space-between;
-            margin-top: 8px;
+            justify-content: center;
             button {
-                border: 3px solid #fcb900;
-                color: #fcb900;
+                color: black;
                 &:hover {
                     background-color: #fcb900;
                     color: white;
                 }
             }
         }
+        
 
     }
     Footer {

@@ -6,6 +6,8 @@ import Footer from '../components/Footer.jsx';
 import { addToFavorites } from '../store/slices/gameSlice.js'
 import { removeFromFavorites } from '../store/slices/gameSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 export default function Allgames() {
   const [game, setGame] = useState([]);
@@ -109,6 +111,17 @@ export default function Allgames() {
     return () => clearTimeout(timer);
   }, [showMessageAdd, showMessageRemove]);
 
+  useEffect(() => {
+    scrollToTop();
+  }, []); 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="allGames">
       <Header />
@@ -152,8 +165,9 @@ export default function Allgames() {
             ))}
           </div>
           <div className="pagination">
-            <button onClick={handlePreviousPage} disabled={currentPage === 1}>Previous</button>
-            <button onClick={handleNextPage} disabled={!nextPage}>Next</button>
+            <Stack spacing={2}>
+              <Pagination count={40} variant="outlined" onChange={(event, page) => {handlePageClick(page); scrollToTop();}}/>
+            </Stack>
           </div>
         </div>
       <Footer/>

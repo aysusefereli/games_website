@@ -74,13 +74,12 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 .creatorsPage .creators .pagination {
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
+  justify-content: center;
 }
 .creatorsPage .creators .pagination button {
-  border: 3px solid #fcb900;
-  color: #fcb900;
+  color: black;
 }
 .creatorsPage .creators .pagination button:hover {
   background-color: #fcb900;

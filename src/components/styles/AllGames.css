@@ -125,13 +125,12 @@
   transform-origin: bottom;
 }
 .allGames .gameList .pagination {
-  margin-top: 80px;
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .allGames .gameList .pagination button {
-  border: 3px solid #fcb900;
-  color: #fcb900;
+  color: black;
 }
 .allGames .gameList .pagination button:hover {
   background-color: #fcb900;
@@ -139,7 +138,7 @@
 }
 .allGames Footer {
   position: absolute;
-  top: 2800px;
+  top: 2700px;
 }
 
 @media (max-width: 1024px) {
