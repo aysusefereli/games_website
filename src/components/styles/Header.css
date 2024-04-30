@@ -188,6 +188,9 @@ header .header .hamburger span {
     color: black;
     font-weight: bold;
   }
+  .headerPage .header .navbar .favorites .favorites-count {
+    display: none;
+  }
   .headerPage .header .navbar Form {
     position: absolute;
     top: 230px;

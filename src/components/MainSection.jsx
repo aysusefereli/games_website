@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { addToFavorites } from '../store/slices/gameSlice.js'
 import { removeFromFavorites } from '../store/slices/gameSlice.js';
 import { useDispatch, useSelector } from 'react-redux';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function MainSection() {
   const [games, setGames] = useState([]);
@@ -120,25 +122,29 @@ export default function MainSection() {
     return rating >= percentage ? 'color5' : (rating >= percentage - 20 ? 'color4' : (rating >= percentage - 40 ? 'color3' : (rating >= percentage - 60 ? 'color2' : 'color1')));
   }
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <div>
-      <section className='secondsection'>
+      <section className='secondsection'data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
         <div className='secondPage'>
-          <div className='cloux_games'>
+          <div className='cloux_games' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
             <div className='texts' id='firstText'>
               <h1>CREATORS</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, itaque.</p>
               <Link className='pages' to={"/creators"}>Creators</Link>
             </div>
           </div>
-          <div className='cloux_game_details'>
+          <div className='cloux_game_details' data-aos="fade-up" data-aos-duration="1150" data-aos-delay="500" >
             <div className='texts' id='secondText'>
               <h1>PUBLISHERS</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, corporis.</p>
               <Link className='pages' to={"/publishers"}>Publishers</Link>
             </div>
           </div>
-          <div className='cloux_contact'>
+          <div className='cloux_contact' data-aos="fade-up" data-aos-duration="1250" data-aos-delay="500" >
             <div className='texts' id='thirdText'>
               <h1>DEVELOPERS</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, cumque.</p>
@@ -148,12 +154,12 @@ export default function MainSection() {
         </div>
       </section>
 
-      <section className='thirdsection'>
+      <section className='thirdsection' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
         <div className='ourTopGames'>
           <h1 className='ourGames'>FEATURED <span>GAMES</span></h1>
         <main className="page-content">
           {featured.slice(0, 9).map((game, index) => (
-            <div className="card" key={index} style={{ backgroundImage: `url(${game.background_image})`}}>
+            <div className="card" key={index} style={{ backgroundImage: `url(${game.background_image})`}} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
               <div>
                 <div className="content">
                   <h2 className="title">{game.name}</h2>
@@ -174,7 +180,7 @@ export default function MainSection() {
       <section className='fourthsection'>
         <div>
             <div className='newGame' style={{ backgroundImage: `url(${newGame.background_image_additional})` }}>
-              <div className='newGameText'>
+              <div className='newGameText' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
                 <h1>THE GAME <span>IS RELEASED!</span></h1>
                 <p>{newGame.name}</p>
                 <Link className="pages" to={`/games/${newGame.id}`}>See More</Link>
@@ -189,19 +195,19 @@ export default function MainSection() {
       <section className='fifthsection'>
       {showMessageAdd && <div id="message">Game added to Favorites!</div>} 
       {showMessageRemove && <div id="message">Game removed from Favorites!</div>}
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <h1>TOP <span>GENRES</span></h1>
         </div>
         <div className='topGenres'>
           <button className="dropbtn">Genres</button>
-          <div className={`tabs-buttons ${tabButtonStatus ? "show" : ""}`} style={{background: `linear-gradient(#ffc10787, #ffc107b0), url(https://media.rawg.io/media/screenshots/723/7230cc1be966c19d2470a19d277b31e9.jpg)`}}>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="0" className={`tabs-buttons ${tabButtonStatus ? "show" : ""}`} style={{background: `linear-gradient(#ffc10787, #ffc107b0), url(https://media.rawg.io/media/screenshots/723/7230cc1be966c19d2470a19d277b31e9.jpg)`}}>
             {genres.map((genre, index) => (
               <button onClick={() => { tabClickHandler(genre.id); tabButtonsHandler(); }} key={index}
               className={`tabs-button ${isActive(genre.id) ? 'tabs-active' : ''}`}>{genre?.name}</button>
             ))}
           </div>
           <div className='sidebar'>
-            <div className='gameGroup'>
+            <div className='gameGroup' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
               {activeTab?.games?.map((gameData, index) => {
                 const game = games.find(g => g.id === gameData.id) || {} ;
               
@@ -232,7 +238,7 @@ export default function MainSection() {
         <div>
           <h1>OUR <span>GAME STORES</span></h1>
         </div>
-        <div className='ourStores'>
+        <div className='ourStores' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           {stores.map((store, index) => (
             <div className='stores' key={index}>
               <div>
