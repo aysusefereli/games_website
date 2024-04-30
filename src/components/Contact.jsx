@@ -8,29 +8,32 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [game, setGame] = useState([]);
-  const servKey = import.meta.env.VITE_SERVCE_KEY
-  const tempKey = import.meta.env.VITE_TEMPLATE_KEY
-  const myPublicKey = import.meta.env.VITE_MY_PUBLIC_KEY
   const form = useRef()
   const btn = useRef()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const sendData = (e) => {
-    e.preventDefault()
-    btn.current.innerText = "Sending....";
-    emailjs.sendForm(servKey, tempKey, form.current, myPublicKey)
-      .then(() => {
-        setName("")
-        setEmail("")
-        setMessage("")
-        btn.current.innerText = "Submit"
-        alert("Sent Sucsessfully.")
-      }).catch((err) => {
-        console.log(err);
-        alert("Could not send.")
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_tblmpac', 'template_wsbixiq', form.current, {
+        publicKey: 'VuLT51HHpG5LZDnnl',
       })
-    }
+      .then(
+        () => {
+          setName("")
+          setEmail("")
+          setMessage("")
+          btn.current.innerText = "Submit"
+          alert("email successfully sent check inbox");
+        },
+        (error) => {
+          alert('FAILED...', error.text);
+        },
+      );
+  };
 
   useEffect(() => {
     fetch("https://api.rawg.io/api/games/hogwarts-legacy/screenshots?key=442dd6be349248468289ed3abce8fc03")
@@ -69,7 +72,7 @@ export default function Contact() {
         </div>
         <div className='form'>
           <div className='email'>
-              <form onSubmit={sendData} ref={form}>
+              <form onSubmit={sendEmail} ref={form}>
                <div className='nameAndEmail'>
                 <div className="form-group">
                   <input
