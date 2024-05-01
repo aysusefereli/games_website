@@ -39,7 +39,8 @@
 .publishersPage .publishers {
   position: absolute;
   top: 530px;
-  transform: translateX(10%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .publishersPage .publishers .publishers_list {
   display: grid;
@@ -51,6 +52,7 @@
   margin-bottom: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   height: 320px;
+  width: 330px;
 }
 .publishersPage .publishers .publishers_list .publisher .text {
   color: white;
@@ -84,20 +86,18 @@
 }
 
 @media (max-width: 1024px) {
-  .publishersPage .publishers {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
   .publishersPage .publishers .publishers_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 10px;
   }
   .publishersPage Footer {
     position: absolute;
-    top: 2500px;
+    top: 2550px;
+  }
+}
+@media (max-width: 700px) {
+  .publishersPage .publishers .publishers_list .publisher {
+    width: 250px;
   }
 }
 @media (max-width: 590px) {
@@ -117,7 +117,7 @@
   }
   .publishersPage Footer {
     position: absolute;
-    top: 4300px;
+    top: 4550px;
   }
 }
 @media (max-width: 350px) {

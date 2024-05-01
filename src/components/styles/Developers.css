@@ -39,7 +39,8 @@
 .developersPage .developers {
   position: absolute;
   top: 530px;
-  transform: translateX(10%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .developersPage .developers .developers_list {
   display: grid;
@@ -51,6 +52,7 @@
   margin-bottom: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   height: 310px;
+  width: 320px;
 }
 .developersPage .developers .developers_list .developer .text {
   color: white;
@@ -84,26 +86,24 @@
 }
 
 @media (max-width: 1024px) {
-  .developersPage .developers {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
   .developersPage .developers .developers_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 10px;
   }
   .developersPage Footer {
     position: absolute;
-    top: 2400px;
+    top: 2550px;
+  }
+}
+@media (max-width: 700px) {
+  .developersPage .developers .developers_list .developer {
+    width: 250px;
   }
 }
 @media (max-width: 590px) {
   .developersPage Footer {
     position: absolute;
-    top: 2400px;
+    top: 2550px;
   }
 }
 @media (max-width: 555px) {
@@ -117,7 +117,7 @@
   }
   .developersPage Footer {
     position: absolute;
-    top: 4200px;
+    top: 4450px;
   }
 }
 @media (max-width: 350px) {

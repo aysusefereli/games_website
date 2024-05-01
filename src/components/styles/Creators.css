@@ -39,18 +39,21 @@
 .creatorsPage .creators {
   position: absolute;
   top: 500px;
-  transform: translateX(10%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .creatorsPage .creators .creators_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  justify-self: center;
 }
 .creatorsPage .creators .creators_list .creator {
   max-width: 350px;
   margin-bottom: 60px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   height: 370px;
+  width: 320px;
 }
 .creatorsPage .creators .creators_list .creator .text {
   color: white;
@@ -93,20 +96,18 @@
 }
 
 @media (max-width: 1024px) {
-  .creatorsPage .creators {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
   .creatorsPage .creators .creators_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 10px;
   }
   .creatorsPage Footer {
     position: absolute;
     top: 2900px;
+  }
+}
+@media (max-width: 700px) {
+  .creatorsPage .creators .creators_list .creator {
+    width: 250px;
   }
 }
 @media (max-width: 555px) {
@@ -120,7 +121,7 @@
   }
   .creatorsPage Footer {
     position: absolute;
-    top: 5100px;
+    top: 5350px;
   }
 }
 @media (max-width: 350px) {
