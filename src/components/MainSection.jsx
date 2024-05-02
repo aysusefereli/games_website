@@ -128,7 +128,7 @@ export default function MainSection() {
 
   return (
     <div>
-      <section className='secondsection'data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+      <section className='secondsection'>
         <div className='secondPage'>
           <div className='cloux_games' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >
             <div className='texts' id='firstText'>
